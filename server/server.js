@@ -1,10 +1,13 @@
 const express = require('express');
-const db = require('../server/config/db')
+const db = require('./config/db')
 const cors = require('cors');
 
 const app = express();
 app.use(cors())
 
+// Define routes
+app.use('/api/users', require("./routes/register"));
+app.use('/api/auth', require("./routes/auth"));
 
 app.get('/', (req, res) => 
 {
