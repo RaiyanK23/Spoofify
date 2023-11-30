@@ -1,27 +1,10 @@
 const express = require('express');
-const mysql = require('mysql2');
+const db = require('../server/config/db')
 const cors = require('cors');
 
 const app = express();
 app.use(cors())
 
-const db = mysql.createConnection(
-    {
-        host: "localhost",
-        user: "raiyan",
-        password: "Raiyan23",
-        database: "test_db1"
-    }
-)
-
-db.connect((err) => {
-    if (err) {
-      console.error('Error connecting to MySQL:', err);
-      return;
-    }
-    console.log('Connected to MySQL');
-  });
-  
 
 app.get('/', (req, res) => 
 {
