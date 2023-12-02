@@ -1,0 +1,22 @@
+$Darkgrey: #183318;
+$Lightgrey: #375237;
+$Grey: #748573;
+$Green: #87B886;
+$LightGreen: #7CEA7B;
+$White: #FFFFFF;
+
+header
+{
+    margin-top: 50px;
+    padding: 8px;
+    background-color: $White;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+
+    img
+    {
+    height: 75px;
+    }
+}

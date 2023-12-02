@@ -1,0 +1,21 @@
+@import "ColorPallet";
+
+.app
+{
+  display: flex;
+  justify-content: center;
+
+  .container
+  {
+    //Contanier Setup
+    width: 100%;
+
+    //Links
+    .link
+    {
+      text-decoration: none;
+      color: $DarkBlue;
+    }
+
+  }
+}
