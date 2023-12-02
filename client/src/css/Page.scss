@@ -8,7 +8,10 @@
   .container
   {
     //Contanier Setup
-    width: 100%;
+    width: 100vw;
+    height: 100vh; 
+    /* Use my premade gradient */
+    @extend .custom-gradient; 
 
     //Links
     .link

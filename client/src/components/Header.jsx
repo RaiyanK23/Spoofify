@@ -1,11 +1,13 @@
 import React from "react";
+import Logo from "../Images/Logo.png";
 
 import "../css/Header.scss"
 const  Header = () => 
 {
   return(
     <header>
-      <span> <b>Test website </b> using <b>React :)</b> </span>
+      <img src={Logo} alt=""/>
+      <span> <b>Spoofify </b> </span>
     </header>
   )
 }

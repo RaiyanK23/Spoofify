@@ -1,22 +1,24 @@
-$Darkgrey: #183318;
-$Lightgrey: #375237;
-$Grey: #748573;
-$Green: #87B886;
-$LightGreen: #7CEA7B;
-$White: #FFFFFF;
+@import "ColorPallet";
 
 header
 {
-    margin-top: 50px;
-    padding: 8px;
-    background-color: $White;
+    //Text
+    span
+    {
+        color: white;
+        font-size: xx-large;
+        margin-left: 22px;
+    }
+    
+    padding: 10px;
+    background-color: $DeepDarkBlue;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: left;
     font-size: 15px;
 
     img
     {
-    height: 75px;
+        height: 50px;
     }
 }
