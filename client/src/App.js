@@ -8,6 +8,12 @@ import
 
 //importing Pages
 import Home from "./pages/Home"
+import SignIn from "./pages/SignIn"
+import SignUp from "./pages/SignUp"
+
+import ArtistSignIn from "./pages/ArtistSignIn"
+import UserSignIn from "./pages/UserSignIn"
+
 import Header from "./components/Header"
 import "./css/Page.scss"
 
@@ -29,7 +35,27 @@ const router  = createBrowserRouter([
     children:[
       {
         path:"/",
+        element:<SignIn/>
+      },
+
+      {
+        path:"/Home",
         element:<Home/>
+      },
+
+      {
+        path:"/signup",
+        element:<SignUp/>
+      },
+
+      {
+        path:"/artist/signin",
+        element:<ArtistSignIn/>
+      },
+
+      {
+        path:"/user/signin",
+        element:<UserSignIn/>
       },
       
     ]

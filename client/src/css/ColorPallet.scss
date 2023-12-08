@@ -4,9 +4,46 @@ $LightDarkBlue: #207285;
 $Blue: #51a5b8;
 $LightBlue: #96dbeb;
 $WhiteBlue: #cdeef5;
+$White: #FFFFFF;
 
 
 .custom-gradient 
 {
     background: linear-gradient(to bottom, #1f8e94, #034352);
+}
+
+.custom-Button
+{
+    .customButton 
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        background-color: $LightBlue;
+        font-weight: 700;
+        color: $DeepDarkBlue;
+        width: 75%;
+        height: 30px;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 13px;
+        cursor: pointer;
+        font-size: 16px;
+
+        transition: background-color 0.3s;
+    
+        /* Hover effect */
+        &:hover 
+        {
+            background-color: $Blue; 
+        }
+
+        &:active 
+        {
+            background-color: $Blue; /* Change to the desired active color */
+            transform: translateY(1px); /* Add a slight downward shift when pressed */
+        }
+    }
+
 }
