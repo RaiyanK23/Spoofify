@@ -1,39 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "../css/ArtistSignIn.scss";
+import "../css/SignIn.scss";
 
 const SignIn = () => {
   return (
     <div className="signIn">
       <div className="signInBox">
+      <p>Artist Sign-In</p>
+        {/* Add your sign-in form elements here */}
+        <label htmlFor="username">Username:</label>
+        <input type="text" id="username" name="username" />
 
-        <p>Artist Sign-In</p>
+        <label htmlFor="password">Password:</label>
+        <input type="password" id="password" name="password" />
 
-        {/* Uername*/}
-        <div className="usernameField">
-          <input type="text" id="username" name="username" placeholder="Username"/>
-        </div>
-
-        {/* Password */}
-        <div className="passwordField">
-          <input type="password" id="password" name="password" placeholder="Enter your password" />
-        </div>
-
-        {/* Sigin in Button*/}
-        <div className="signinButton">
-          <Link to="/artist/signin"  className="customButton">
-            Sign-in
-          </Link>
-        </div>
-
-        {/*Back Button*/}
-        <div className="backbutton">
-          <Link to="/"  className="customButton">
-            Back
-          </Link>
-        </div>
-
+        <button type="submit">Sign In</button>
       </div>
     </div>
   );

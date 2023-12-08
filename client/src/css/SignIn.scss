@@ -68,12 +68,6 @@
             align-items: center;
             margin-bottom: 30px;
 
-            .customButton 
-            {
-                width: 75%;
-                height: 30px;
-            }
-            
             @extend .custom-Button; 
         }
 
@@ -84,13 +78,6 @@
             flex-direction: column;
             align-items: center;
             margin-top: 30px;
-
-            .customButton 
-            {
-                width: 75%;
-                height: 30px;
-            }
-            
             @extend .custom-Button; 
         }
         

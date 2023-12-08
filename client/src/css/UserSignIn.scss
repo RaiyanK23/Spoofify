@@ -1,0 +1,104 @@
+@import "ColorPallet";
+
+.signIn 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    
+   
+    label 
+    {
+        color: $White;
+    }
+
+
+    .signInBox 
+    {
+        background-color: $DeepDarkBlue;
+        border-radius: 20px;
+        width: 350px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px; 
+        
+        p
+        {
+            font-size: 24px;
+            color: $White;
+            padding: 0px; 
+        }
+
+        
+       .usernameField
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+
+            input 
+            {
+                width: 100%;
+                height: 30px;
+                border-radius: 10px;
+            }
+        }
+
+        .passwordField
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+
+            input 
+            {
+                width: 100%;
+                height: 30px;
+                border-radius: 10px;
+            }
+        }
+
+        .backbutton 
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 180px;
+            width: 100%;
+  
+            .customButton 
+            {
+                width: 30%;
+                height: 15px;
+            }
+            
+            @extend .custom-Button; 
+
+        }
+
+        .signinButton 
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 15px;
+            width: 100%;
+  
+            .customButton 
+            {
+                width: 60%;
+                height: 15px;
+            }
+            
+            @extend .custom-Button; 
+
+        }
+    }
+  
+  }
