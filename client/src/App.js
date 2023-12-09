@@ -7,12 +7,14 @@ import
 } from "react-router-dom";
 
 //importing Pages
-import Home from "./pages/Home"
 import SignIn from "./pages/SignIn"
 import SignUp from "./pages/SignUp"
 
-import ArtistSignIn from "./pages/ArtistSignIn"
-import UserSignIn from "./pages/UserSignIn"
+import ArtistHome from "./pages/ArtistPages/ArtistHome"
+import ArtistSignIn from "./pages/ArtistPages/ArtistSignIn"
+
+import UserSignIn from "./pages/UserPages/UserSignIn"
+import UserHome from "./pages/UserPages/UserHome"
 
 import Header from "./components/Header"
 import "./css/Page.scss"
@@ -39,18 +41,23 @@ const router  = createBrowserRouter([
       },
 
       {
-        path:"/Home",
-        element:<Home/>
-      },
-
-      {
         path:"/signup",
         element:<SignUp/>
       },
 
       {
+        path:"artist/home",
+        element:<ArtistHome/>
+      },
+
+      {
         path:"/artist/signin",
         element:<ArtistSignIn/>
+      },
+
+      {
+        path:"user/home",
+        element:<UserHome/>
       },
 
       {

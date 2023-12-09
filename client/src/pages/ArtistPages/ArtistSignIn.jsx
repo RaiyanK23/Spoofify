@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "../css/ArtistPagesCSS/ArtistSignIn.scss";
+import "../../css/ArtistPagesCSS/ArtistSignIn.scss";
 
 const ArtistSignIn = () => {
   return (

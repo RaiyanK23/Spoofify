@@ -1,9 +1,9 @@
 import React from "react";
 import {Link} from "react-router-dom"
 
-import "../css/Home.scss"
+import "../../css/ArtistPagesCSS/ArtistHome.scss"
 
-const  Home = () => 
+const  ArtistHome = () => 
 {
   return(
     <div className="home">
@@ -12,4 +12,4 @@ const  Home = () =>
   )
 }
 
-export default Home
+export default ArtistHome
