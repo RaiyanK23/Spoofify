@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "../css/UserSignIn.scss";
 
-const SignIn = () => {
+const UserSignIn = () => {
   return (
     <div className="signIn">
       <div className="signInBox">
@@ -39,4 +39,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default UserSignIn;

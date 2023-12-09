@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 
 import "../css/SignUp.scss";
 
-const SignUp = () => {
+const SignUp = () => 
+{
   return (
     <div className="signIn">
       <div className="signInBox">

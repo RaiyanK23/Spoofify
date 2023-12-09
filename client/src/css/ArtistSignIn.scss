@@ -1,21 +1,14 @@
 @import "ColorPallet";
 
-
 .signIn 
 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Adjust the height as needed for your layout */
+    height: 100vh; 
     
-    p
-    {
-        font-size: 24px;
-        color: $White;
-        margin-bottom: 50px;
-    }
-
+   
     label 
     {
         color: $White;
@@ -25,43 +18,86 @@
     .signInBox 
     {
         background-color: $DeepDarkBlue;
-        padding: 40px;
         border-radius: 20px;
-        width: 400px;
+        width: 330px;
         height: 500px;
-
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 50px;
+        padding: 30px; 
         
-        /* Add any additional styling you want for the sign-in box */
-        
-        label 
+        p
         {
-            margin-bottom: 8px;
+            font-size: 24px;
+            color: $White;
+            padding: 0px; 
         }
 
-        input 
+        
+       .usernameField
         {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+
+            input 
+            {
+                width: 100%;
+                height: 30px;
+                border-radius: 10px;
+            }
+        }
+
+        .passwordField
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+
+            input 
+            {
+                width: 100%;
+                height: 30px;
+                border-radius: 10px;
+            }
+        }
+
+        .backbutton 
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 180px;
             width: 100%;
-            padding: 8px;
-            margin: 16px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+  
+            .customButton 
+            {
+                width: 30%;
+                height: 15px;
+            }
+            
+            @extend .custom-Button; 
+
         }
 
-        button 
+        .signinButton 
         {
-            background-color: $Blue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 15px;
+            width: 100%;
+  
+            .customButton 
+            {
+                width: 60%;
+                height: 15px;
+            }
             
-            color: white;
-            width: 75%;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
+            @extend .custom-Button; 
+
         }
     }
   

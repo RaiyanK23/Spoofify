@@ -12,7 +12,7 @@ const SignIn = () => {
 
         {/* User Siginin */}
         <div className="userButton">
-          <label htmlFor="username">Are you a user</label>
+          <label htmlFor="username">Are you a user?</label>
           <Link to="/user/signin"  className="customButton">
             Sign-in Here
           </Link>
@@ -20,7 +20,7 @@ const SignIn = () => {
 
         {/* Artist Siginin */}
         <div className="artistButton">
-          <label htmlFor="username">Are you an Artist</label>
+          <label htmlFor="username">Are you an Artist?</label>
           <Link to="/artist/signin"  className="customButton">
             Sign-in Here
           </Link>
