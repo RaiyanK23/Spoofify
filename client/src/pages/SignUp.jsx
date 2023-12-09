@@ -33,16 +33,15 @@ const SignUp = () =>
           <label htmlFor="accountType">Account type</label>
 
           <select id="dropdown" name="dropdown">
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
+            <option value="option1">User</option>
+            <option value="option2">Artist</option>
           </select>
         </div>
 
         {/* Email Address*/}
         <div className="field">
-          <label htmlFor="emailAddress" placeholder="name@domain.com">Email Address</label>
-          <input type="text" id="emailAddress" name="emailAddress" />
+          <label htmlFor="emailAddress" >Email Address</label>
+          <input type="text" id="emailAddress" name="emailAddress" placeholder="name@domain.com"/>
         </div>
 
         {/* Username */}
