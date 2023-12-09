@@ -1,16 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "../css/ArtistSignIn.scss";
+import "../css/ArtistPagesCSS/ArtistSignIn.scss";
 
 const ArtistSignIn = () => {
   return (
-    <div className="signIn">
-      <div className="signInBox">
+    <div className="artistSignIn">
+      <div className="artistSignInBox">
 
         <p>Artist Sign-In</p>
 
-        {/* Uername*/}
+        {/* Username*/}
         <div className="usernameField">
           <input type="text" id="username" name="username" placeholder="Username"/>
         </div>
@@ -20,15 +20,15 @@ const ArtistSignIn = () => {
           <input type="password" id="password" name="password" placeholder="Enter your password" />
         </div>
 
-        {/* Sigin in Button*/}
-        <div className="signinButton">
+        {/* Sign in Button*/}
+        <div className="signInButton">
           <Link to="/Artist/signin"  className="customButton">
             Sign-in
           </Link>
         </div>
 
         {/*Back Button*/}
-        <div className="backbutton">
+        <div className="backButton">
           <Link to="/"  className="customButton">
             Back
           </Link>

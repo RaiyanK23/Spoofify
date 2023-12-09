@@ -1,4 +1,4 @@
-@import "ColorPallet";
+@import "../ColorPallet";
 .signIn 
 {
     display: flex;
@@ -17,6 +17,7 @@
     {
         font-size: 18px;
         color: $White;
+        margin-bottom: 12px;
     }
 
 
@@ -25,7 +26,7 @@
         background-color: $DeepDarkBlue;
         padding: 40px;
         border-radius: 20px;
-        width: 400px;
+        width: 350px;
         height: 500px;
 
         display: flex;
@@ -33,33 +34,6 @@
         align-items: center;
         margin-bottom: 50px;
         
-        /* Add any additional styling you want for the sign-in box */
-        
-
-        input 
-        {
-            width: 100%;
-            padding: 8px;
-            margin: 16px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-
-        button 
-        {
-            background-color: $LightBlue;
-            
-            font-weight: 700;
-            color: $DeepDarkBlue;
-            width: 75%;
-            height: 40px;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 13px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
         .userButton
         {
             width: 100%;

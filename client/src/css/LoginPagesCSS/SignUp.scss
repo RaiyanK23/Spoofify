@@ -1,0 +1,87 @@
+@import "../ColorPallet";
+
+.signUp 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Adjust the height as needed for your layout */
+    
+    p
+    {
+        font-size: 24px;
+        font-weight: bold;
+        color: $White;
+        margin-bottom: 50px;
+    }
+
+    label 
+    {
+        color: $White;
+    }
+
+
+    .signUpBox 
+    {
+        background-color: $DeepDarkBlue;
+        padding: 40px;
+        border-radius: 20px;
+        width: 800px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 100px;
+
+
+        @extend .custom-field;
+        .field
+        {
+            width: 100%;
+        } 
+        
+
+        .firstAndLastName
+        {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            
+            width: 100%;
+        }
+
+        .firstAndLastName > .field:first-child 
+        {
+            margin-right: 20px;
+        }
+
+        .firstAndLastName > .field:nth-child(2)
+        {
+            margin-left: 20px;
+        }
+
+
+        @extend .custom-SelectField;
+
+        
+        .signUpButton 
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+  
+            .customButton 
+            {
+                width: 30%;
+                height: 15px;
+            }
+            
+            @extend .custom-Button; 
+
+        }
+    }
+  
+  }

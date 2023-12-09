@@ -1,16 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "../css/UserSignIn.scss";
+import "../css/UserPagesCSS/UserSignIn.scss";
 
 const UserSignIn = () => {
   return (
-    <div className="signIn">
-      <div className="signInBox">
+    <div className="userSignIn">
+      <div className="userSignInBox">
 
         <p>User Sign-In</p>
 
-        {/* Uername*/}
+        {/* Username*/}
         <div className="usernameField">
           <input type="text" id="username" name="username" placeholder="Username"/>
         </div>
@@ -21,14 +21,14 @@ const UserSignIn = () => {
         </div>
 
         {/* Sigin in Button*/}
-        <div className="signinButton">
+        <div className="signInButton">
           <Link to="/User/signin"  className="customButton">
             Sign-in
           </Link>
         </div>
 
         {/*Back Button*/}
-        <div className="backbutton">
+        <div className="backButton">
           <Link to="/"  className="customButton">
             Back
           </Link>
