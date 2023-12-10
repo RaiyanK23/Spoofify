@@ -9,6 +9,8 @@ app.use(cors())
 app.use('/api/register', require("./routes/register"));
 app.use('/api/auth', require("./routes/auth"));
 app.use('/api/artistAuth', require("./routes/artistAuth"));
+app.use('/api/playlists', require('./routes/playlist'));
+app.use('/api/logout', require('./routes/logout'));
 
 app.get('/', (req, res) => 
 {

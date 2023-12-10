@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
 import "../../css/UserPagesCSS/UserSignIn.scss";
 
 const UserSignIn = () => {
@@ -33,7 +32,6 @@ const UserSignIn = () => {
       if (response.ok) {
         // Login successful
         console.log(result.message);
-        
         // Redirect to home if AccountType is "Admin"
         if (result.user.AccountType === 'User') {
           navigate('/'); // Replace with your admin home page route
