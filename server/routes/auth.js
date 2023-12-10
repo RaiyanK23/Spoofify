@@ -3,7 +3,10 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const db = require('../config/db'); 
 
-router.post('/login', async (req, res) => {
+router.use(express.json());
+router.use(express.urlencoded({ extended: true }));
+
+router.post('/', async (req, res) => {
   try 
   {
     const { Email, Password } = req.body;
@@ -11,6 +14,7 @@ router.post('/login', async (req, res) => {
     const getUserQuery = `
       SELECT * FROM users WHERE Email = ?
     `;
+
 
     db.query(getUserQuery, [Email], async (err, results) => {
       if (err) {
@@ -25,8 +29,14 @@ router.post('/login', async (req, res) => {
           const isPasswordValid = await bcrypt.compare(Password, user.Password);
 
           if (isPasswordValid) {
-            // Password is valid, user is authenticated
-            res.status(200).json({ message: 'Login successful', user });
+            // Check AccountType
+            if (user.AccountType === 'User' || user.AccountType === 'Admin') {
+              // Password is valid, user is authenticated, and AccountType is valid
+              res.status(200).json({ message: 'Login successful', user });
+            } else {
+              // Invalid AccountType
+              res.status(401).json({ error: 'Invalid AccountType' });
+            }
           } else {
             // Password is invalid
             res.status(401).json({ error: 'Invalid credentials' });

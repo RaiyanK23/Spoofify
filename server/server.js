@@ -6,7 +6,7 @@ const app = express();
 app.use(cors())
 
 // Define routes
-app.use('/api/users', require("./routes/register"));
+app.use('/api/register', require("./routes/register"));
 app.use('/api/auth', require("./routes/auth"));
 
 app.get('/', (req, res) => 
