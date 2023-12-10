@@ -1,12 +1,12 @@
 import React from "react";
 import {Link} from "react-router-dom"
 
-import "../../css/ArtistPagesCSS/ArtistHome.scss"
+import "../../css/UserPagesCSS/UserHome.scss"
 
 const  UserHome = () => 
 {
   return(
-    <div className="home">
+    <div className="userHome">
       
     </div>
   )
