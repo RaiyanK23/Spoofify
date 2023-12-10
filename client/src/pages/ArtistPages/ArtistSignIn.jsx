@@ -1,35 +1,89 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 import "../../css/ArtistPagesCSS/ArtistSignIn.scss";
 
 const ArtistSignIn = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const handleSignIn = async () => {
+    // Check if email and password are provided
+    if (!email || !password) {
+      alert("Please provide both email and password.");
+      return;
+    }
+
+    try {
+      // Fetch the login route with email and password
+      const response = await fetch('http://localhost:5000/api/artistAuth/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ Email: email, Password: password }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        // Login successful
+        console.log(result.message);
+        
+        // Redirect to home or perform other actions
+        navigate('/'); // Replace with your artist home page route
+      } else {
+        // Login failed
+        console.error(result.error);
+        alert("Login failed. Please check your credentials.");
+      }
+    } catch (error) {
+      console.error('Error during login:', error);
+      alert("Internal Server Error during login.");
+    }
+  };
+
   return (
     <div className="artistSignIn">
       <div className="artistSignInBox">
 
         <p>Artist Sign-In</p>
 
-        {/* Username*/}
+        {/* Email */}
         <div className="usernameField">
-          <input type="text" id="username" name="username" placeholder="Username"/>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </div>
 
         {/* Password */}
         <div className="passwordField">
-          <input type="password" id="password" name="password" placeholder="Enter your password" />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </div>
 
-        {/* Sign in Button*/}
+        {/* Sign-in Button */}
         <div className="signInButton">
-          <Link to="/Artist/signin"  className="customButton">
+          <button className="customButton" onClick={handleSignIn}>
             Sign-in
-          </Link>
+          </button>
         </div>
 
-        {/*Back Button*/}
+        {/* Back Button */}
         <div className="backButton">
-          <Link to="/"  className="customButton">
+          <Link to="/" className="customButton">
             Back
           </Link>
         </div>
@@ -38,4 +92,5 @@ const ArtistSignIn = () => {
     </div>
   );
 };
+
 export default ArtistSignIn;

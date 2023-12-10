@@ -8,6 +8,7 @@ app.use(cors())
 // Define routes
 app.use('/api/register', require("./routes/register"));
 app.use('/api/auth', require("./routes/auth"));
+app.use('/api/artistAuth', require("./routes/artistAuth"));
 
 app.get('/', (req, res) => 
 {
