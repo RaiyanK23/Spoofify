@@ -1,0 +1,109 @@
+@import "../../ColorPallet";
+
+.userSearchComponent
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .userHeaderBox
+    {
+        height: 90px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        
+        .searchButton
+        {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 400px;
+            height: 40px;
+
+            border: 2px solid $White; 
+            border-radius: 40px;
+            padding: 0;
+
+            color: $White;
+            background-color: transparent;
+            margin-left: 30px;
+
+            font-size: 17px;
+
+            input
+            {
+                width: 300px;
+                height: 40px;
+
+                border: none;
+                outline: none; 
+                background-color: transparent;
+
+                color: $White;
+                font-size: 20px;
+            }
+
+            input::placeholder 
+            {
+                font-size: 20px;
+                color: $White;
+            }
+
+
+            img
+            {
+                margin-left: 20px;
+                margin-right: 20px;
+                width: 25px;
+            }
+
+            &:active 
+            {
+                transform: translateY(1px); /* Add a slight downward shift when pressed */
+            }
+
+            &:hover
+            {
+                color: $OffWhite;
+            }
+        }
+
+        
+    }
+
+    .searchResultsArea
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1500px;
+        margin-top: 40px;
+        flex-grow: 1;
+        
+
+        header
+        {
+            font-size: 40px;
+            font-weight: 700;
+            color: $White;
+        }
+
+        .searchResults
+        {
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between;
+            flex-wrap: wrap;
+            overflow: auto;
+
+            min-width: 0; /* Prevent items from overflowing if the content is too long */
+            margin: 8px; /* Add some spacing between items */
+            box-sizing: border-box; /* Include padding and border in the total width/height */
+        }
+    }
+
+}

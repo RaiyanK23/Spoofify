@@ -1,4 +1,5 @@
-import React from "react";
+
+import React, { useState } from "react";
 import {Link} from "react-router-dom"
 
 import SearchIcon from "../../Images/SearchIcon.png";
@@ -9,10 +10,20 @@ import AddPlaylistIcon from "../../Images/AddPlaylistIcon.png";
 import "../../css/UserPagesCSS/UserHome.scss"
 import MusicPlayer from "../../components/MusicPlayer.jsx"
 import PlaylistButton from "../../components/PlaylistButton.jsx"
+
 import UserHomeComponent from "../../components/UserComponents/UserHomePageComponent.jsx"
+import UserSearchComponent from "../../components/UserComponents/UserSearchPageComponent.jsx"
 
 const  UserHome = () => 
 {
+
+  const [currentComponent, setCurrentComponent] = useState("home");
+
+  const handleButtonClick = (component) => 
+  {
+    setCurrentComponent(component);
+  };
+
   return(
     <div className="userHome">
       
@@ -24,13 +35,13 @@ const  UserHome = () =>
           {/* Search and Home Buttons*/}
           <div className="searchAndHomeButtons">
             {/* Search Button*/}
-            <button className="searchButton">
+            <button className="searchButton"  onClick={() => handleButtonClick("search")}>
               <img src={SearchIcon} alt=""/>
                Search
             </button>
 
             {/* Home Button*/}
-            <button className="homeButton">
+            <button className="homeButton" onClick={() => handleButtonClick("home")}>
               <img src={HomeIcon} alt=""/>
                Home
             </button>
@@ -64,7 +75,11 @@ const  UserHome = () =>
 
         {/* Main Screen area */}
         <div className="homePage">
-          <UserHomeComponent/>
+          {currentComponent === "home" ? (
+              <UserHomeComponent />
+            ) : (
+              <UserSearchComponent />
+            )}
         </div>
 
       </div>

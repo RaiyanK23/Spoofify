@@ -1,19 +1,21 @@
 import React from "react";
 import Logo from "../Images/Logo.png";
 
-import "../css/Components/Header.scss"
+import "../css/Components/Username.scss"
 
 /*Make a call to the DB to get currently logged in user info*/
-const  Header = () => 
+const  Username = () => 
 {
   return(
-   <div className="userheaderBox">
-     <header>
-      <img src={Logo} alt=""/>
-      <span> <b>Spoofify </b> </span>
-    </header>
-   </div>
+    <div className="username">
+      Welcome Username
+
+      {/* Logout button */}
+      <button className="logoutButton">
+          <u>Logout</u>
+      </button>
+    </div>
   )
 }
 
-export default Header
+export default Username

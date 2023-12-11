@@ -1,0 +1,33 @@
+@import "../ColorPallet";
+
+.username
+{
+    color: $White;
+    font-size: 17px;
+    margin-right: 20px;
+
+    .logoutButton
+    {
+
+        border: none;
+        padding: 0;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        color: $White;
+        background-color: transparent;
+
+        font-size: 14px;
+
+        &:active 
+        {
+            transform: translateY(1px);
+        }
+
+        &:hover
+        {
+            color: $OffWhite;
+            scale: (1.03);
+        }
+    }
+}

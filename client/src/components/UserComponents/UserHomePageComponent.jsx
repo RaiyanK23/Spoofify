@@ -2,6 +2,7 @@ import React from "react";
 import "../../css/Components/UserComponents/UserHomePageComponent.scss"
 import PlaylistButton from "../../components/PlaylistButton.jsx"
 import RectanglePlaylistButton from "../../components/RectanglePlaylistButton.jsx"
+import Username from "../../components/Username.jsx"
 
 
 const  UserHomeComponent = () => 
@@ -10,15 +11,7 @@ const  UserHomeComponent = () =>
    <div className="userHomeComponent">
         {/* Header */}
         <div className="userHeaderBox">
-            <div className="username">
-                Welcome Username
-            </div>
-
-            {/* Logout button */}
-            <button className="logoutButton">
-               <u>Logout</u>
-            </button>
-
+            <Username/>
         </div>
 
         {/* Favorite Playlists Area */}
