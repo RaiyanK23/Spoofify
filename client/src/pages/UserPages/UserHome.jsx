@@ -9,10 +9,11 @@ import AddPlaylistIcon from "../../Images/AddPlaylistIcon.png";
 
 import "../../css/UserPagesCSS/UserHome.scss"
 import MusicPlayer from "../../components/MusicPlayer.jsx"
-import PlaylistButton from "../../components/PlaylistButton.jsx"
+import PlaylistButton from "../../components/SongButtons/PlaylistButton.jsx"
 
 import UserHomeComponent from "../../components/UserComponents/UserHomePageComponent.jsx"
 import UserSearchComponent from "../../components/UserComponents/UserSearchPageComponent.jsx"
+import UserPlaylistPageComponent from "../../components/UserComponents/UserPlaylistPageComponent.jsx"
 
 const  UserHome = () => 
 {
@@ -22,6 +23,11 @@ const  UserHome = () =>
   const handleButtonClick = (component) => 
   {
     setCurrentComponent(component);
+  };
+
+  const handlePlaylistButtonClick = () => 
+  {
+    setCurrentComponent("playlist");
   };
 
   return(
@@ -63,10 +69,10 @@ const  UserHome = () =>
             </div>
 
             <div className="listOfPlaylist">
-              <PlaylistButton/>
-              <PlaylistButton/>
-              <PlaylistButton/>
-              <PlaylistButton/>
+              <PlaylistButton onClick={handlePlaylistButtonClick} />
+              <PlaylistButton onClick={handlePlaylistButtonClick} />
+              <PlaylistButton onClick={handlePlaylistButtonClick} />
+              <PlaylistButton onClick={handlePlaylistButtonClick} />
             </div>
 
           </div>
@@ -75,11 +81,9 @@ const  UserHome = () =>
 
         {/* Main Screen area */}
         <div className="homePage">
-          {currentComponent === "home" ? (
-              <UserHomeComponent />
-            ) : (
-              <UserSearchComponent />
-            )}
+          {currentComponent === "home" ? (<UserHomeComponent />) :
+          currentComponent === "search" ? (<UserSearchComponent />) : 
+          (<UserPlaylistPageComponent />)}
         </div>
 
       </div>

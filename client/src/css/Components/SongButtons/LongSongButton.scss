@@ -1,0 +1,91 @@
+@import "../../ColorPallet";
+
+.songContainer
+{
+    padding: 10px;
+    background-color: $Blue;
+    border-radius: 12px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    border: none;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    height: 50px;
+
+
+    
+    span
+    {
+        color: white;
+    }
+
+    .imageAndInfo
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: transparent;
+        border: none;
+        margin-left: 20px;
+
+       
+        img
+        {
+            height: 50px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.04)
+        }
+
+
+        .songInfo
+        {
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .mainText
+            {
+                font-size: 18px;
+            }
+
+            .subText
+            {
+                font-size: 13px;
+            }
+        }
+
+    }
+
+    .albumName
+    {
+        margin-right: 60px;
+        font-size: 15px;
+    }
+
+    .songDuration
+    {
+       margin-right: 175px;
+       font-size: 15px;
+    }
+
+    
+
+    &:active 
+    {
+        transform: translateY(1px); /* Add a slight downward shift when pressed */
+    }
+
+    &:hover
+    {
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1)
+    }
+
+}

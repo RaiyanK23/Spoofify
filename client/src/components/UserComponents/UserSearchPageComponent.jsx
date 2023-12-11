@@ -3,8 +3,8 @@ import "../../css/Components/UserComponents/UserSearchComponent.scss"
 
 import SearchIcon from "../../Images/SearchIcon.png";
 
-import PlaylistButton from "../../components/PlaylistButton.jsx"
-import RectanglePlaylistButton from "../../components/RectanglePlaylistButton.jsx"
+import PlaylistButton from "../SongButtons/PlaylistButton.jsx"
+import RectanglePlaylistButton from "../SongButtons/RectanglePlaylistButton.jsx"
 import Username from "../../components/Username.jsx"
 
 const  UserSearchComponent = () => 

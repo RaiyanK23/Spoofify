@@ -1,7 +1,7 @@
 import React from "react";
 import "../../css/Components/UserComponents/UserHomePageComponent.scss"
-import PlaylistButton from "../../components/PlaylistButton.jsx"
-import RectanglePlaylistButton from "../../components/RectanglePlaylistButton.jsx"
+import PlaylistButton from "../SongButtons/PlaylistButton.jsx"
+import RectanglePlaylistButton from "../SongButtons/RectanglePlaylistButton.jsx"
 import Username from "../../components/Username.jsx"
 
 

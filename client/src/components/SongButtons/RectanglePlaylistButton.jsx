@@ -1,7 +1,7 @@
 import React from "react";
-import PlaylistIcon from "../Images/Graduation.jpeg";
+import PlaylistIcon from "../../Images/Graduation.jpeg";
 
-import "../css/Components/RectanglePlaylistButton.scss"
+import "../../css/Components/SongButtons/RectanglePlaylistButton.scss"
 const  PlaylistButton = () => 
 {
   return(
