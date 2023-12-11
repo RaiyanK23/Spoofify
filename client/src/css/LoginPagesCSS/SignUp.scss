@@ -32,8 +32,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 100px;
-
 
         @extend .custom-field;
         .field
@@ -76,7 +74,7 @@
             .customButton 
             {
                 width: 30%;
-                height: 15px;
+                height: 40px;
             }
             
             @extend .custom-Button; 

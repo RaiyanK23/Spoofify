@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "../Images/Logo.png";
 
 import "../css/Components/MusicPlayer.scss"
-const  Header = () => 
+const  MusicPlayer = () => 
 {
   return(
     <div className="musicPlayerBox">
@@ -16,4 +16,4 @@ const  Header = () =>
   )
 }
 
-export default Header
+export default MusicPlayer
