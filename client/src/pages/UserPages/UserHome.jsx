@@ -55,8 +55,6 @@ const  UserHome = () =>
               <PlaylistButton/>
               <PlaylistButton/>
               <PlaylistButton/>
-
-
             </div>
 
           </div>
