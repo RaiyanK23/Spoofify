@@ -1,0 +1,118 @@
+@import "../../ColorPallet";
+
+.userHomeComponent
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .userHeaderBox
+    {
+        height: 60px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+
+
+        .username
+        {
+            color: $White;
+            font-size: 17px;
+            margin-right: 20px;
+        }
+        .logoutButton
+        {
+
+            border: none;
+            padding: 0;
+            margin-right: 20px;
+
+            color: $White;
+            background-color: transparent;
+
+            font-size: 14px;
+
+            &:active 
+            {
+                transform: translateY(1px);
+            }
+
+            &:hover
+            {
+                color: $OffWhite;
+                scale: (1.03);
+            }
+        }
+    }
+
+
+    .favoritePlaylistArea
+    {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        max-width: 1500px;
+        
+
+        header
+        {
+            font-size: 40px;
+            font-weight: 700;
+            color: $White;
+        }
+
+        .favoriteAreaBox
+        {
+            height: 200px;
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between;
+            flex-wrap: wrap;
+
+            .playlistButton
+            {
+                width: 400px;
+            }
+            
+
+            min-width: 0; /* Prevent items from overflowing if the content is too long */
+            margin: 8px; /* Add some spacing between items */
+            box-sizing: border-box; /* Include padding and border in the total width/height */
+        }
+    }
+
+
+    .recommendedPlaylistArea
+    {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        max-width: 1500px;
+        margin-top: 40px;
+        
+
+        header
+        {
+            font-size: 40px;
+            font-weight: 700;
+            color: $White;
+        }
+
+        .RecommendedAreaBox
+        {
+            height: 200px;
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between;
+            flex-wrap: wrap;
+            overflow: auto;
+
+            min-width: 0; /* Prevent items from overflowing if the content is too long */
+            margin: 8px; /* Add some spacing between items */
+            box-sizing: border-box; /* Include padding and border in the total width/height */
+        }
+    }
+
+}

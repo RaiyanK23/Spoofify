@@ -9,6 +9,7 @@ import AddPlaylistIcon from "../../Images/AddPlaylistIcon.png";
 import "../../css/UserPagesCSS/UserHome.scss"
 import MusicPlayer from "../../components/MusicPlayer.jsx"
 import PlaylistButton from "../../components/PlaylistButton.jsx"
+import UserHomeComponent from "../../components/UserComponents/UserHomePageComponent.jsx"
 
 const  UserHome = () => 
 {
@@ -63,7 +64,7 @@ const  UserHome = () =>
 
         {/* Main Screen area */}
         <div className="homePage">
-          <p>homePage </p>
+          <UserHomeComponent/>
         </div>
 
       </div>
