@@ -2,7 +2,6 @@
 
 .musicPlayerBox
 {
-    width: 100vw;
     margin: 0;
     padding: 0;
     display:  flex;
@@ -10,6 +9,7 @@
 
     header
     {
+        height: 85px;
         //Text
         span
         {

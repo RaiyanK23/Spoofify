@@ -1,13 +1,209 @@
 @import "../ColorPallet";
 
+$pageGap: 10px;
+$boxRoundness: 12px;
+
 .userHome
 {
     display: flex;
     flex-direction: column;
     height: 100%;
+
     .window
     {
         flex: 1;
-        background-color: aqua;
+        background-color: $DeepDarkBlue;
+
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+
+        .searchHomeAndPlaylist
+        {
+            display: flex;
+            flex-direction: column;
+            width: 320px;
+            margin-left:  $pageGap;
+            
+
+            .searchAndHomeButtons
+            {
+                height: 100px;
+                margin-bottom:  $pageGap;
+                border-radius: $boxRoundness;
+                @extend .custom-gradient;
+                padding: 12px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                
+                .searchButton
+                {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    border: none;
+                    padding: 0;
+
+                    color: $White;
+                    background-color: transparent;
+
+                    font-size: 17px;
+
+                    img
+                    {
+                        margin-right: 10px;
+                        width: 25px;
+                    }
+
+                    &:active 
+                    {
+                        transform: translateY(1px); /* Add a slight downward shift when pressed */
+                    }
+
+                    &:hover
+                    {
+                        color: $OffWhite;
+                    }
+                }
+
+                .homeButton
+                {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    border: none;
+                    padding: 0;
+
+                    color: $White;
+                    background-color: transparent;
+
+                    font-size: 17px;
+
+                    img
+                    {
+                        margin-right: 10px;
+                        width: 18px;
+                    }
+
+                    &:active 
+                    {
+                        transform: translateY(1px); /* Add a slight downward shift when pressed */
+                    }
+
+                    &:hover
+                    {
+                        color: $OffWhite;
+                    }
+                }
+
+            }
+
+            .playlists
+            {
+                display: flex;
+                flex-direction: column;
+                overflow: auto;
+
+                flex-grow: 1;
+                max-height:654px;
+                border-radius: $boxRoundness;   
+                @extend .custom-gradient; 
+
+                .playlistHeader
+                {
+                    background: linear-gradient(to bottom, $LightDarkBlue, #1d6777);
+                    border-top-left-radius: $boxRoundness;
+                    border-top-right-radius: $boxRoundness;
+                    padding: 8px;
+
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    
+                    
+                    height: 50px;
+
+                    color: $White;
+                    font-size: 19px;
+
+
+
+                    header 
+                    {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        img
+                        {
+                            margin-right: 10px;
+                            width: 30px;
+                        }
+            
+                    }
+
+
+                .createPlaylistButton
+                {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    border: none;
+                    padding: 0;
+
+                    background-color: transparent;
+
+                    font-size: 17px;
+
+                    img
+                    {
+                        margin-right: 10px;
+                        width: 18px;
+                    }
+
+                    &:active 
+                    {
+                        transform: translateY(1px); /* Add a slight downward shift when pressed */
+                    }
+
+                    &:hover
+                    {
+                        scale: (1.07);
+                        color: $OffWhite;
+                    }
+                }
+
+                }
+                
+                .listOfPlaylist
+                {
+                    flex-grow: 1;
+
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+
+                }
+
+
+            }
+        }
+
+      
+
+        .homePage
+        {
+            flex-grow: 1;
+            margin-left:  $pageGap;
+            margin-right: $pageGap;
+            border-radius: $boxRoundness; 
+            @extend .custom-gradient;
+        }
     }
 }

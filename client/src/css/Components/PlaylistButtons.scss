@@ -1,0 +1,43 @@
+@import "../ColorPallet";
+
+.playlistButton
+{
+    padding: 10px;
+    background-color: $Blue;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 10px;
+
+    border: none;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    img
+    {
+        height: 50px;
+        border-radius: 10px;
+    }
+
+    span
+    {
+        color: white;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    &:active 
+    {
+        transform: translateY(1px); /* Add a slight downward shift when pressed */
+    }
+
+    &:hover
+    {
+        scale: (1.01);
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1)
+    }
+
+}
