@@ -1,16 +1,12 @@
 import React from "react";
-import PlaylistIcon from "../../Images/Graduation.jpeg";
+import "../../css/Components/SongButtons/PlaylistButtons.scss";
 
-import "../../css/Components/SongButtons/PlaylistButtons.scss"
-const  PlaylistButton = ({ onClick }) => 
-{
-  return(
-    
+const PlaylistButton = ({ onClick, playlistName }) => {
+  return (
     <button className="playlistButton" onClick={onClick}>
-        <img src={PlaylistIcon} alt=""/>
-        <span> Graduation </span>
+      <span>{playlistName}</span>
     </button>
-  )
-}
+  );
+};
 
-export default PlaylistButton
+export default PlaylistButton;
