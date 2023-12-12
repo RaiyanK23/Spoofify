@@ -8,7 +8,7 @@ const  PlaylistButton = ({ onClick }) =>
     <button className="addButtonBox" onClick={onClick}>
       
         <img src={AddImage} alt=""/>
-        <span> Add Song / Playlist </span>
+        <span> Add Song / Album </span>
 
     </button>
   )

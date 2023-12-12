@@ -4,9 +4,6 @@ import "../../css/Components/ArtistComponents/ArtistAddSongComponent.scss"
 
 import Username from "../../components/Username.jsx"
 
-import ArtistRectanglePlaylistButton from "../SongButtons/ArtistRectanglePlaylistButton.jsx"
-import ArtistAddSongOrPlaylistButton from "../SongButtons/ArtistAddSongOrPlaylistButton.jsx"
-
 const  ArtistHomeComponent = ({handleNavigation}) => 
 {
   return(

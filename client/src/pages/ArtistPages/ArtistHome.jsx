@@ -13,6 +13,7 @@ import PlaylistButton from "../../components/SongButtons/PlaylistButton.jsx"
 
 import ArtistHomeComponent from "../../components/ArtistComponents/ArtistHomePageComponent.jsx"
 import ArtistAddSongComponent from "../../components/ArtistComponents/ArtistAddSongComponent.jsx"
+import ArtistAddAlbumComponent from "../../components/ArtistComponents/ArtistAddAlbumComponent.jsx"
 import ArtistPlaylistPageComponent from "../../components/ArtistComponents/ArtistPlaylistPageComponent.jsx"
 
 const  ArtistHome = () => 
@@ -52,6 +53,7 @@ const  ArtistHome = () =>
         <div className="homePage">
           {currentComponent === "home" ? (<ArtistHomeComponent handleNavigation={handleButtonClick}/>) :
           currentComponent === "addSong" ? (<ArtistAddSongComponent handleNavigation={handleButtonClick} />) : 
+          currentComponent === "addAlbum" ? (<ArtistAddAlbumComponent handleNavigation={handleButtonClick} />) : 
           (<ArtistPlaylistPageComponent />)}
         </div>
 

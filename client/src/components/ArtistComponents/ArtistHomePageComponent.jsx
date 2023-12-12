@@ -63,7 +63,7 @@ const  ArtistHomeComponent = ({handleNavigation}) =>
                     Song
                 </button>
 
-                <button className="customButton">
+                <button className="customButton"  onClick={() => handleNavigation("addAlbum")}>
                     Album
                 </button>
 
