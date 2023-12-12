@@ -8,7 +8,7 @@ import Username from "../../components/Username.jsx"
 import ArtistRectanglePlaylistButton from "../SongButtons/ArtistRectanglePlaylistButton.jsx"
 import ArtistAddSongOrPlaylistButton from "../SongButtons/ArtistAddSongOrPlaylistButton.jsx"
 
-const  ArtistHomeComponent = () => 
+const  ArtistHomeComponent = ({handleNavigation}) => 
 {
     
   /*Add Song or playlist dialog box */
@@ -59,7 +59,7 @@ const  ArtistHomeComponent = () =>
 
             {/* Choice buttons*/}
             <div className="ControlButtons">
-                <button className="customButton">
+                <button className="customButton" onClick={() => handleNavigation("addSong")}>
                     Song
                 </button>
 
