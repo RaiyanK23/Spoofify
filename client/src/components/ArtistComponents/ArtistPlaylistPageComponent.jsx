@@ -17,8 +17,8 @@ const  UserPlaylistComponent = () =>
                 <img src={PlaylistPic} alt=""/>
 
                 <div className="playlistTexts">
-                    <span className="mainText"><b>Liked Song</b></span>
-                    <span className="subText">Playlist made by you</span>
+                    <span className="mainText"><b>Your Album name</b></span>
+                    <span className="subText">Made by you</span>
                 </div>
                 
             </div>

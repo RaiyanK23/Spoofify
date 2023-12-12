@@ -39,14 +39,14 @@ const  ArtistHomeComponent = ({handleNavigation}) =>
             </header>
 
             <div className="RecommendedAreaBox">
-                <ArtistRectanglePlaylistButton/>
-                <ArtistRectanglePlaylistButton/>
-                <ArtistRectanglePlaylistButton/>
-                <ArtistRectanglePlaylistButton/>
-                <ArtistRectanglePlaylistButton/>
-                <ArtistRectanglePlaylistButton/>
-                <ArtistRectanglePlaylistButton/>
-                <ArtistRectanglePlaylistButton/>
+                <ArtistRectanglePlaylistButton onClick={() => handleNavigation("viewSong")}/>
+                <ArtistRectanglePlaylistButton onClick={() => handleNavigation("viewSong")}/>
+                <ArtistRectanglePlaylistButton onClick={() => handleNavigation("viewSong")}/>
+                <ArtistRectanglePlaylistButton onClick={() => handleNavigation("viewSong")}/>
+                <ArtistRectanglePlaylistButton onClick={() => handleNavigation("viewSong")}/>
+                <ArtistRectanglePlaylistButton onClick={() => handleNavigation("viewSong")}/>
+                <ArtistRectanglePlaylistButton onClick={() => handleNavigation("viewSong")}/>
+                <ArtistRectanglePlaylistButton onClick={() => handleNavigation("viewSong")}/>
                 <ArtistAddSongOrPlaylistButton onClick={handleOpenAddDialog}/>
             </div>
         </div>

@@ -3,10 +3,10 @@ import Graduation from "../../Images/Graduation.jpeg";
 import RemoveIcon from "../../Images/RemoveIcon.png";
 
 import "../../css/Components/SongButtons/ArtistRectanglePlaylistButton.scss"
-const  PlaylistButton = () => 
+const  PlaylistButton = ({ onClick }) => 
 {
   return(  
-    <button className="rectanglePlaylistButton">
+    <button className="rectanglePlaylistButton" onClick={onClick}>
         <img src={Graduation} alt=""/>
         <span> Graduation </span>
 

@@ -54,7 +54,8 @@ const  ArtistHome = () =>
           {currentComponent === "home" ? (<ArtistHomeComponent handleNavigation={handleButtonClick}/>) :
           currentComponent === "addSong" ? (<ArtistAddSongComponent handleNavigation={handleButtonClick} />) : 
           currentComponent === "addAlbum" ? (<ArtistAddAlbumComponent handleNavigation={handleButtonClick} />) : 
-          (<ArtistPlaylistPageComponent />)}
+          currentComponent === "viewSong" ? (<ArtistPlaylistPageComponent handleNavigation={handleButtonClick} />) : 
+          (<ArtistHomeComponent />)}
         </div>
 
       </div>
