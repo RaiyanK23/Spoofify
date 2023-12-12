@@ -54,12 +54,173 @@
 
     }
 
-    .musicController
+    .musicControllerBox
     {
-        audio 
+        flex-grow: 1;
+        display:  flex;
+        flex-direction: row;
+        align-items: center;
+
+
+        .middleMusicControls
         {
-            outline: none;
+            width: 100%;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+
+            .musicControllers
+            {
+                display:  flex;
+                flex-direction: row;
+                align-items: center;
+
+                button
+                {
+                    border: none;
+                    padding: 0;
+                    background-color: transparent;
+
+                    &:active 
+                    {
+                        transform: translateY(1px); /* Add a slight downward shift when pressed */
+                    }
+
+                    &:hover
+                    {
+                        scale: (1.03);
+                    }
+                }
+
+                .previousButton
+                {
+                    img
+                    {
+                        width: 20px;
+                    }
+                }
+
+                .pausePlay
+                {
+
+                    img
+                    {
+                        margin-left: 15px;
+                        margin-right: 15px;
+                        width: 30px;
+                    }
+                }
+
+                .nextButton
+                {
+                    img
+                    {
+                        width: 20px;
+                    }
+                }
+
+
+            }
+
+
+            .bottomMusicControls
+            {
+                margin-top: 10px;
+                display:  flex;
+                flex-direction: row;
+                align-items: center;
+                
+                span
+                {
+                    color: $OffWhite;
+                    font-size: 12px;
+                }
+    
+                .musicSlider
+                {
+                    height: 2px;
+                    width: 1000px;
+                    color: $LightBlue;
+    
+                    margin-left: 10px;
+                    margin-right: 10px;
+    
+                    .MuiSlider-rail 
+                    {
+                        height: 6px;
+                        background-color: $Blue;
+                    }
+    
+                    .MuiSlider-thumb
+                    {
+                        display: none;
+                    }
+    
+                    .MuiSlider-track
+                    {
+                        height: 6px;
+                        width: 10px;
+                        color: $LightBlue;
+                    }
+    
+                    &:hover
+                    {
+                        cursor: auto;
+                    }
+                }
+    
+            }
+    
         }
+
+        .VolumeControls
+        {
+            width: 150px;
+            display:  flex;
+            flex-direction: row;
+            align-items: center;
+            margin-right: 30px;
+
+            img
+            {
+                width: 17px;
+                height: 17px;
+                margin-right: 10px;
+            }
+
+            .volumeSlider
+            {
+                height: 2px;
+                color: $LightBlue;
+
+                .MuiSlider-rail 
+                {
+                    height: 6px;
+                    background-color: $Blue;
+                }
+
+                .MuiSlider-thumb
+                {
+                    display: none;
+                }
+
+                .MuiSlider-track
+                {
+                    height: 5px;
+                    width: 10px;
+                    color: $LightBlue;
+                }
+
+                &:hover
+                {
+                    cursor: auto;
+                }
+            }
+
+        }
+        
+       
     }
 
 }
