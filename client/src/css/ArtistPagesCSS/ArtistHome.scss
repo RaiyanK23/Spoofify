@@ -1,87 +1,88 @@
 @import "../ColorPallet";
 
-.home
-{
-    .posts
-    {
-        margin-top: 50px;
-        display: flex;
-        flex-direction: column;
-        gap: 150px;
+$pageGap: 10px;
+$boxRoundness: 12px;
 
-        .post
+.ArtistHome
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .ArtistWindow
+    {
+        flex: 1;
+        background-color: $DeepDarkBlue;
+
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+
+        .searchHomeAndPlaylist
         {
             display: flex;
-            flex-direction: row;
-            gap: 100px;
+            flex-direction: column;
+            width: 320px;
+            margin-left:  $pageGap;
+            
 
-            &:nth-child(2n+1)
+            .homeButtonContainer
             {
-            flex-direction: row-reverse;
-            }
+                height: 50px;
+                margin-bottom:  $pageGap;
+                border-radius: $boxRoundness;
+                @extend .custom-gradient;
+                padding: 12px;
 
-            .img
-            {
-            flex: 2;
-            position: relative;
-
-            &::after
-            {
-                content: "";
-                width: 100%;
-                height: 100%;
-                background-color: $Blue;
-                position: absolute;
-
-                top: 13px;
-                left: 13px;
-                z-index: -1;
-            }
-
-            img
-            {
-                width: 100%;
-                max-height: 270px;
-                object-fit: cover;
-            }
-            }
-
-            .content
-            {
-                flex: 3;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
-
-                h1
+                justify-content: space-around;
+                
+                .homeButton
                 {
-                    font-size: 48px;
-                }
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
 
-                p
-                {
-                    font-size: 18px;
-                }
-
-                button
-                {
-                    width: max-content;
-                    padding: 10px 20px;
                     border: none;
-                    cursor: pointer;
-                    background-color: $WhiteBlue;
-                    border: 1px solid $Blue;
-                    color: $LightBlue;
+                    padding: 0;
 
-                    
+                    color: $White;
+                    background-color: transparent;
+
+                    font-size: 17px;
+
+                    img
+                    {
+                        margin-right: 10px;
+                        width: 18px;
+                    }
+
+                    &:active 
+                    {
+                        transform: translateY(1px); /* Add a slight downward shift when pressed */
+                    }
+
                     &:hover
                     {
-                        transform: scale(1.04);
-                        background-color: $Blue;
-                        color: $LightDarkBlue;
+                        color: $OffWhite;
                     }
                 }
+
             }
+        }
+
+      
+
+        .homePage
+        {
+            flex-grow: 1;
+            margin-left:  $pageGap;
+            margin-right: $pageGap;
+            border-radius: $boxRoundness; 
+            @extend .custom-gradient;
+            padding: 20px;
+            max-height: 750px;
         }
     }
 }

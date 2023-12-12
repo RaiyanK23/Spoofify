@@ -1,0 +1,176 @@
+@import "../../ColorPallet";
+
+.ArtistAddAlbumComponent
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .ArtistHeaderBox
+    {
+        height: 60px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+
+
+        .username
+        {
+            color: $White;
+            font-size: 17px;
+            margin-right: 20px;
+            margin-top: 10px;
+        }
+        .logoutButton
+        {
+
+            border: none;
+            padding: 0;
+            margin-right: 20px;
+
+            color: $White;
+            background-color: transparent;
+
+            font-size: 14px;
+
+            &:active 
+            {
+                transform: translateY(1px);
+            }
+
+            &:hover
+            {
+                color: $OffWhite;
+                scale: (1.03);
+            }
+        }
+    }
+
+
+    .catalogArea
+    {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        max-width: 1500px;
+        margin-top: 40px;
+        height: 60vh;
+        
+        .Title
+        {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+            font-size: 40px;
+
+            header
+            {
+                
+                font-weight: 700;
+                color: $White;
+            }
+        }
+        
+
+        .form
+        {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content:space-evenly;
+            flex-wrap: wrap;
+            overflow: auto;
+
+            min-width: 0; /* Prevent items from overflowing if the content is too long */
+            margin: 8px; /* Add some spacing between items */
+            box-sizing: border-box; /* Include padding and border in the total width/height */
+            
+            @extend .custom-field;
+            color: $White;
+            font-size: 20px;
+
+            .TrackName
+            {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                :first-child 
+                {
+                    width: 600px;
+                }
+
+                :nth-child(2) 
+                {
+                    margin-right: 20px;
+                }
+
+            }
+
+            .AlbumUploading
+            {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                .field
+                {
+                    .fileInput 
+                    {
+                        width: 100%;
+                        padding: 10px;
+                        border-radius: 10px;
+                        background-color: $White;
+                        color: #333;
+                
+                        font-size: 16px;
+                    }
+
+                    input[type=file]::file-selector-button
+                    {
+                        visibility: hidden;
+                        color: transparent;
+                    }
+
+                    input[type=file]::-webkit-file-upload-button
+                    {
+                        visibility: hidden;
+                        color: transparent;
+                    }
+                }
+
+                :first-child 
+                {
+                    width: 600px;
+                }
+
+                :nth-child(2) 
+                {
+                    margin-right: 20px;
+                }
+            }
+            
+        }
+
+        @extend .custom-Button;
+        .customButton 
+        {
+            width: 250px;
+            height: 50px;
+            font-size: 20px;
+        } 
+
+
+    }
+
+
+}

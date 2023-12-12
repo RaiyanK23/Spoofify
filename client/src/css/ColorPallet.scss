@@ -71,11 +71,6 @@ $OffWhite: #cfcfcf;
             transform: translateY(1px); /* Add a slight downward shift when pressed */
         }
 
-        &:hover,
-        &:focus 
-        {
-            scale: (1.005);
-        }
     }
 }
 
@@ -130,12 +125,6 @@ $OffWhite: #cfcfcf;
             &:active 
             {
                 transform: translateY(1px); /* Add a slight downward shift when pressed */
-            }
-
-            &:hover,
-            &:focus 
-            {
-                scale: (1.005);
             }
         }
 
