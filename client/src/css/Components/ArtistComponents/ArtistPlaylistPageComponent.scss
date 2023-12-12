@@ -1,0 +1,119 @@
+@import "../../ColorPallet";
+
+.userPlaylistComponent
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .userHeaderBox
+    {
+        flex-grow: 1;
+        height: 200px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        .playlistInformation
+        {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 400px;
+            background-color: $Blue;
+
+            padding: 0;
+
+            background-color: transparent;
+
+            
+            color: $White;
+            font-size: 17px;
+
+
+            img
+            {
+                border-radius: 20px;
+                width: 150px;
+                margin-left: 40px;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1)
+            }
+
+            .playlistTexts
+            {
+                display: flex;
+                flex-direction: column;
+                margin-left: 30px;
+                
+                .mainText
+                {
+                    width: 400px;
+                    font-size: 50px;
+                }
+
+                .subText
+                {
+                    width: 400px;
+                    font-size: 18px;
+                }
+
+            }
+        }
+
+
+        .username
+        {
+            margin-top: 25px;
+        }
+
+        
+    }
+
+    .playlistContentsArea
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 1500px;
+        margin-top: 20px;
+        
+    
+        .playlistRowInfo
+        {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width:80%;
+            span
+            {
+                margin-right: 20px;
+                color: $White;
+            }
+        }
+
+        .divider
+        {
+            margin-top: 10px;
+            width: 100%; /* Adjust the width of the line */
+            height: 2px; /* Adjust the height (thickness) of the line */
+            background-color: $Blue; /* Adjust the color of the line */
+            display: block;
+            content: '';
+        }
+
+
+        .playlistContents
+        {
+            width: 1500px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            overflow: auto;
+
+           
+        }
+    }
+
+}
