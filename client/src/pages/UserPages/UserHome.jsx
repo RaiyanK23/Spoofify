@@ -1,6 +1,7 @@
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {Link} from "react-router-dom"
+import axios from 'axios';
 
 import SearchIcon from "../../Images/SearchIcon.png";
 import HomeIcon from "../../Images/HomeIcon.png";

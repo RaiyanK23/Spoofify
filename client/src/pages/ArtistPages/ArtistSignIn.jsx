@@ -32,7 +32,7 @@ const ArtistSignIn = () => {
         console.log(result.message);
         
         // Redirect to home or perform other actions
-        navigate('/'); // Replace with your artist home page route
+        navigate('artist/home');
       } else {
         // Login failed
         console.error(result.error);

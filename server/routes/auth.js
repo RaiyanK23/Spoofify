@@ -7,14 +7,6 @@ const session = require('express-session'); // Import express-session
 router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
 
-// Set up session middleware
-router.use(
-  session({
-    secret: 'your-secret-key', // Change this to a secure, random string
-    resave: false,
-    saveUninitialized: true,
-  })
-);
 
 router.post('/', async (req, res) => {
   try {
@@ -47,7 +39,7 @@ router.post('/', async (req, res) => {
                 
                 // Add other user data as needed
               };
-
+              console.log('Session Information after successful login:', req.session);
               res.status(200).json({ message: 'Login successful', user });
             } else {
               // Invalid AccountType

@@ -25,6 +25,7 @@ const UserSignIn = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ Email: email, Password: password }),
+        credentials: 'include', // Include cookies with the request
       });
 
       const result = await response.json();
@@ -32,11 +33,11 @@ const UserSignIn = () => {
       if (response.ok) {
         // Login successful
         console.log(result.message);
-        // Redirect to home if AccountType is "Admin"
+                
         if (result.user.AccountType === 'User') {
-          navigate('/'); // Replace with your admin home page route
+          navigate('/user/home');
         } else {
-          // Redirect to user home or perform other actions
+          navigate('/admin/home');
         }
       } else {
         // Login failed
