@@ -28,6 +28,7 @@ app.use('/api/artistAuth', require('./routes/artistAuth'));
 app.use('/api/playlists', require('./routes/playlist'));
 app.use('/api/logout', require('./routes/logout'));
 app.use('/api/userInfo', require('./routes/userInfo'));
+app.use('/api/playlistSongs', require('./routes/playlistSongs'));
 
 app.get('/', (req, res) => {
   return res.json('From Backend');
