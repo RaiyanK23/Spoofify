@@ -5,29 +5,61 @@
     margin: 0;
     padding: 0;
     display:  flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    height: 100px;
+    background-color: $DeepDarkBlue;
 
-    header
+
+    .imageAndInfo
     {
-        height: 85px;
-        //Text
-        span
-        {
-            color: white;
-            font-size: xx-large;
-            margin-left: 22px;
-        }
-        
-        padding: 10px;
-        background-color: $DeepDarkBlue;
         display: flex;
+        flex-direction: row;
         align-items: center;
-        justify-content: left;
-        font-size: 15px;
+        justify-content: flex-start;
+        background-color: transparent;
+        border: none;
+        margin-left: 20px;
 
+        
+        
         img
         {
-            height: 50px;
+            height: 70px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.04)
+        }
+        
+        
+        .songInfo
+        {
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            color: $White;
+            
+            .mainText
+            {
+                font-size: 18px;
+            }
+
+            .subText
+            {
+                margin-top: 4px;
+                color: $OffWhite;
+                font-size: 11px;
+            }
+        }
+
+    }
+
+    .musicController
+    {
+        audio 
+        {
+            outline: none;
         }
     }
+
 }

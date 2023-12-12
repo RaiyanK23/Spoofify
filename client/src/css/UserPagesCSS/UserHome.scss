@@ -201,6 +201,8 @@ $boxRoundness: 12px;
             margin-right: $pageGap;
             border-radius: $boxRoundness; 
             @extend .custom-gradient;
+            padding: 20px;
+            max-height: 750px;
         }
     }
 }

@@ -43,8 +43,6 @@ const  UserPlaylistComponent = () =>
                 <LongSongButton/>
                 <LongSongButton/>
                 <LongSongButton/>
-
-   
             </div>
         </div>
 
