@@ -30,6 +30,13 @@ router.post('/', async (req, res) => {
           if (isPasswordValid) {
             // Check AccountType
             if (user.AccountType === 'Artist') {
+              req.session.user = {
+                UserID: user.UserID,
+                Email: user.Email,
+                
+                // Add other user data as needed
+              };
+              console.log('Session Information after successful login:', req.session);
               // Password is valid, user is authenticated, and AccountType is valid
               res.status(200).json({ message: 'Login successful', user });
             } else {

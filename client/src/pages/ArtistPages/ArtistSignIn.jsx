@@ -22,6 +22,7 @@ const ArtistSignIn = () => {
         headers: {
           'Content-Type': 'application/json',
         },
+        credentials: 'include',
         body: JSON.stringify({ Email: email, Password: password }),
       });
 

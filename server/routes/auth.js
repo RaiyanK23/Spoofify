@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const db = require('../config/db');
-const session = require('express-session'); // Import express-session
 
 router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
