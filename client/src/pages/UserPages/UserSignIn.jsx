@@ -37,7 +37,7 @@ const UserSignIn = () => {
         if (result.user.AccountType === 'User') {
           navigate('/user/home');
         } else {
-          navigate('/admin/home');
+          navigate('/Admin/home');
         }
       } else {
         // Login failed
