@@ -1,16 +1,15 @@
 import React from "react";
 import PlaylistIcon from "../../Images/Graduation.jpeg";
+import "../../css/Components/SongButtons/RectanglePlaylistButton.scss";
 
-import "../../css/Components/SongButtons/RectanglePlaylistButton.scss"
-const  PlaylistButton = () => 
-{
-  return(
-    
+const RectanglePlaylistButton = ({ name, type }) => {
+  return (
     <button className="rectanglePlaylistButton">
-        <img src={PlaylistIcon} alt=""/>
-        <span> Graduation </span>
+      <img src={PlaylistIcon} alt="" />
+      <span>{name}</span>
+      <span className="type">{type}</span>
     </button>
-  )
-}
+  );
+};
 
-export default PlaylistButton
+export default RectanglePlaylistButton;

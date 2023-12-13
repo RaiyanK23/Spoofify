@@ -30,18 +30,7 @@ app.use('/api/userInfo', require('./routes/userInfo'));
 app.use('/api/playlistSongs', require('./routes/playlistSongs'));
 app.use('/api/addSong', require('./routes/addSong'));
 app.use('/api/addAlbum', require('./routes/addAlbum'));
-
-app.get('/', (req, res) => {
-  return res.json('From Backend');
-});
-
-app.get('/users', (req, res) => {
-  const sql = 'SELECT * FROM users';
-  db.query(sql, (err, data) => {
-    if (err) return res.json(err);
-    return res.json(data);
-  });
-});
+app.use('/api/search', require('./routes/search'));
 
 // Close the MySQL connection when the server terminates
 process.on('exit', () => {
