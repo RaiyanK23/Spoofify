@@ -62,4 +62,25 @@ router.delete('/:albumName', (req, res) => {
     });
   });
 
+  // Update an album name
+router.put('/:albumName', (req, res) => {
+    const albumName = req.params.albumName;
+    const newAlbumName = req.body.newAlbumName; // Assuming you provide the new album name in the request body
+  
+    const updateQuery = 'UPDATE album SET AlbumName = ? WHERE AlbumName = ?';
+  
+    db.query(updateQuery, [newAlbumName, albumName], (updateError, result) => {
+      if (updateError) {
+        console.error('Error updating album name:', updateError);
+        return res.status(500).json({ error: 'Internal Server Error during album name update' });
+      }
+  
+      if (result.affectedRows === 1) {
+        res.json({ message: 'Album name updated successfully' });
+      } else {
+        res.status(404).json({ error: 'Album not found' });
+      }
+    });
+  });
+
 module.exports = router;

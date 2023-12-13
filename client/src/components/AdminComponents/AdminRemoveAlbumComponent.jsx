@@ -1,49 +1,69 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import "../../css/Components/ArtistComponents/ArtistAddAlbumComponent.scss"
+import React, { useState } from "react";
+import axios from "axios";
+import "../../css/Components/ArtistComponents/ArtistAddAlbumComponent.scss";
+import Username from "../../components/Username.jsx";
 
-import Username from "../../components/Username.jsx"
+const RemoveAlbumComponent = ({ handleNavigation }) => {
+  const [formData, setFormData] = useState({
+    albumName: "",
+  });
 
-const  ArtistAlbumComponent = ({handleNavigation}) => 
-{
-  return(
-   <div className="ArtistAddAlbumComponent">
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
+
+  const handleRemoveAlbum = async () => {
+    try {
+      const response = await axios.delete(`http://localhost:5000/api/addAlbum/${formData.albumName}`);
+
+      console.log(response.data.message);
+    } catch (error) {
+      console.error("Error removing album:", error.message);
+    }
+
+    handleNavigation("home");
+  };
+
+  return (
+    <div className="ArtistAddAlbumComponent">
       {/* Header */}
       <div className="ArtistHeaderBox">
-          <Username/>
+        <Username />
       </div>
 
       {/* Artist Catalog Area */}
       <div className="catalogArea">
-      
         <div className="Title">
-          <header>
-            Remove Album
-          </header>
+          <header>Remove Album</header>
         </div>
-
-       
 
         <div className="form">
-
-          {/* Track name and BPM*/}
+          {/* Album name */}
           <div className="TrackName">
             <div className="field">
-              <label htmlFor="trackName">Album Name</label>
-              <input/>
+              <label htmlFor="albumName">Album Name</label>
+              <input
+                type="text"
+                name="albumName"
+                value={formData.albumName}
+                onChange={handleInputChange}
+              />
             </div>
           </div>
-            
         </div>
 
-        {/* Add Song Button*/}
-        <button className="customButton" onClick={() => handleNavigation("home")}>
+        {/* Remove Album Button*/}
+        <button className="customButton" onClick={handleRemoveAlbum}>
           Remove Album
         </button>
       </div>
-       
-   </div>
-  )
-}
+    </div>
+  );
+};
 
-export default ArtistAlbumComponent
+export default RemoveAlbumComponent;

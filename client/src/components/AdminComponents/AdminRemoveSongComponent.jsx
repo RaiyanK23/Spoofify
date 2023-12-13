@@ -3,11 +3,9 @@ import axios from "axios";
 import "../../css/Components/ArtistComponents/ArtistAddSongComponent.scss";
 import Username from "../../components/Username.jsx";
 
-const ArtistHomeComponent = ({ handleNavigation }) => {
+const RemoveSongComponent = ({ handleNavigation }) => {
   const [formData, setFormData] = useState({
     trackName: "",
-    trackBPM: "",
-    trackGenre: "Pop", // Default value, you can change it based on your default selection logic
   });
 
   const handleInputChange = (e) => {
@@ -19,17 +17,13 @@ const ArtistHomeComponent = ({ handleNavigation }) => {
     }));
   };
 
-  const handleAddSong = async () => {
+  const handleRemoveSong = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/api/addSong", {
-        TrackName: formData.trackName,
-        BPM: formData.trackBPM,
-        TrackGenre: formData.trackGenre,
-      });
+      const response = await axios.delete(`http://localhost:5000/api/addSong/${formData.trackName}`);
 
       console.log(response.data.message);
     } catch (error) {
-      console.error("Error adding song:", error.message);
+      console.error("Error removing song:", error.message);
     }
 
     handleNavigation("home");
@@ -49,7 +43,7 @@ const ArtistHomeComponent = ({ handleNavigation }) => {
         </div>
 
         <div className="form">
-          {/* Track name and BPM*/}
+          {/* Track name */}
           <div className="TrackNameAndBPM">
             <div className="field">
               <label htmlFor="trackName">Track name</label>
@@ -60,14 +54,11 @@ const ArtistHomeComponent = ({ handleNavigation }) => {
                 onChange={handleInputChange}
               />
             </div>
-            <div className="field">
-
-            </div>
           </div>
         </div>
 
-        {/* Add Song Button*/}
-        <button className="customButton" onClick={handleAddSong}>
+        {/* Remove Song Button*/}
+        <button className="customButton" onClick={handleRemoveSong}>
           Remove Song
         </button>
       </div>
@@ -75,4 +66,4 @@ const ArtistHomeComponent = ({ handleNavigation }) => {
   );
 };
 
-export default ArtistHomeComponent;
+export default RemoveSongComponent;

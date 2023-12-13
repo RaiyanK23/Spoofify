@@ -3,7 +3,7 @@ import axios from "axios";
 import "../../css/Components/ArtistComponents/ArtistAddSongComponent.scss";
 import Username from "../../components/Username.jsx";
 
-const ArtistHomeComponent = ({ handleNavigation }) => {
+const UpdateSongComponent = ({ handleNavigation }) => {
   const [formData, setFormData] = useState({
     trackName: "",
     trackBPM: "",
@@ -19,17 +19,16 @@ const ArtistHomeComponent = ({ handleNavigation }) => {
     }));
   };
 
-  const handleAddSong = async () => {
+  const handleUpdateSong = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/api/addSong", {
-        TrackName: formData.trackName,
+      const response = await axios.put(`http://localhost:5000/api/addSong/${formData.trackName}`, {
         BPM: formData.trackBPM,
         TrackGenre: formData.trackGenre,
       });
 
       console.log(response.data.message);
     } catch (error) {
-      console.error("Error adding song:", error.message);
+      console.error("Error updating song:", error.message);
     }
 
     handleNavigation("home");
@@ -106,8 +105,8 @@ const ArtistHomeComponent = ({ handleNavigation }) => {
           {/* Track Uploading*/}
         </div>
 
-        {/* Add Song Button*/}
-        <button className="customButton" onClick={handleAddSong}>
+        {/* Update Song Button*/}
+        <button className="customButton" onClick={handleUpdateSong}>
           Update Song
         </button>
       </div>
@@ -115,4 +114,4 @@ const ArtistHomeComponent = ({ handleNavigation }) => {
   );
 };
 
-export default ArtistHomeComponent;
+export default UpdateSongComponent;
