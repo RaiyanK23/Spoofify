@@ -3,13 +3,13 @@
 $pageGap: 10px;
 $boxRoundness: 12px;
 
-.AdminHome
+.ArtistHome
 {
     display: flex;
     flex-direction: column;
     height: 100%;
 
-    .AdminWindow
+    .ArtistWindow
     {
         flex: 1;
         background-color: $DeepDarkBlue;
