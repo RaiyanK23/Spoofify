@@ -29,6 +29,7 @@ app.use('/api/playlists', require('./routes/playlist'));
 app.use('/api/logout', require('./routes/logout'));
 app.use('/api/userInfo', require('./routes/userInfo'));
 app.use('/api/playlistSongs', require('./routes/playlistSongs'));
+app.use('/api/addSong', require('./routes/addSong'));
 
 app.get('/', (req, res) => {
   return res.json('From Backend');
