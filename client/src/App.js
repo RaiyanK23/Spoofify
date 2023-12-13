@@ -10,6 +10,8 @@ import
 import SignIn from "./pages/SignIn"
 import SignUp from "./pages/SignUp"
 
+import AdminHome from "./pages/AdminPages/AdminHome.jsx"
+
 import ArtistHome from "./pages/ArtistPages/ArtistHome"
 import ArtistSignIn from "./pages/ArtistPages/ArtistSignIn"
 
@@ -48,6 +50,11 @@ const router  = createBrowserRouter([
       {
         path:"artist/home",
         element:<ArtistHome/>
+      },
+
+      {
+        path:"Admin/home",
+        element:<AdminHome/>
       },
 
       {

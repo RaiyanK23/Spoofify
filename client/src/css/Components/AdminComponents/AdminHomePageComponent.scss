@@ -1,0 +1,194 @@
+@import "../../ColorPallet";
+
+.AdminHomeComponent
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .AdminHeaderBox
+    {
+        height: 60px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .searchButton
+        {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 400px;
+            height: 40px;
+
+            border: 2px solid $White; 
+            border-radius: 40px;
+            padding: 0;
+
+            color: $White;
+            background-color: transparent;
+            margin-left: 30px;
+
+            font-size: 17px;
+
+            input
+            {
+                width: 300px;
+                height: 40px;
+
+                border: none;
+                outline: none; 
+                background-color: transparent;
+
+                color: $White;
+                font-size: 20px;
+            }
+
+            input::placeholder 
+            {
+                font-size: 20px;
+                color: $White;
+            }
+
+
+            img
+            {
+                margin-left: 20px;
+                margin-right: 20px;
+                width: 25px;
+            }
+
+            &:active 
+            {
+                transform: translateY(1px); /* Add a slight downward shift when pressed */
+            }
+
+            &:hover
+            {
+                color: $OffWhite;
+            }
+        }
+
+        
+        .username
+        {
+            color: $White;
+            font-size: 17px;
+            margin-right: 20px;
+            margin-top: 10px;
+        }
+        .logoutButton
+        {
+
+            border: none;
+            padding: 0;
+            margin-right: 20px;
+
+            color: $White;
+            background-color: transparent;
+
+            font-size: 14px;
+
+            &:active 
+            {
+                transform: translateY(1px);
+            }
+
+            &:hover
+            {
+                color: $OffWhite;
+                scale: (1.03);
+            }
+        }
+    }
+
+
+    .catalogArea
+    {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        max-width: 1500px;
+        margin-top: 40px;
+        height: 60vh;
+        
+
+        header
+        {
+            font-size: 40px;
+            font-weight: 700;
+            color: $White;
+        }
+
+        .RecommendedAreaBox
+        {
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between;
+            flex-wrap: wrap;
+            overflow: auto;
+
+            min-width: 0; /* Prevent items from overflowing if the content is too long */
+            margin: 8px; /* Add some spacing between items */
+            box-sizing: border-box; /* Include padding and border in the total width/height */
+        }
+    }
+
+
+    .dialogBox 
+    {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 500px;
+        height: 250px;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background: linear-gradient(to bottom, #055f74, #034352);
+        z-index: 9999;
+        border-radius: 20px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    
+
+        span
+        {
+            color: $White;
+            font-weight: 700;
+            font-size: 30px;
+        }
+
+        .ControlButtons
+        {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .customButton 
+            {
+                width: 170px;
+                height: 45px;
+            }
+            
+            @extend .custom-Button; 
+        }
+
+        @extend .custom-Button;
+        .customButton 
+        {
+            width: 100px;
+            height: 30px;
+        } 
+
+
+    }
+
+}
