@@ -7,7 +7,7 @@ import HomeIcon from "../../Images/HomeIcon.png";
 import PlaylistIcon from "../../Images/PlaylistIcon.png";
 import AddPlaylistIcon from "../../Images/AddPlaylistIcon.png";
 
-import "../../css/ArtistPagesCSS/ArtistHome.scss"
+import "../../css/AdminPagesCSS/AdminHome.scss"
 import MusicPlayer from "../../components/MusicPlayer.jsx"
 import PlaylistButton from "../../components/SongButtons/PlaylistButton.jsx"
 

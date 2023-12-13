@@ -1,0 +1,88 @@
+@import "../ColorPallet";
+
+$pageGap: 10px;
+$boxRoundness: 12px;
+
+.AdminHome
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .AdminWindow
+    {
+        flex: 1;
+        background-color: $DeepDarkBlue;
+
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+
+        .searchHomeAndPlaylist
+        {
+            display: flex;
+            flex-direction: column;
+            width: 320px;
+            margin-left:  $pageGap;
+            
+
+            .homeButtonContainer
+            {
+                height: 50px;
+                margin-bottom:  $pageGap;
+                border-radius: $boxRoundness;
+                @extend .custom-gradient;
+                padding: 12px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                
+                .homeButton
+                {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    border: none;
+                    padding: 0;
+
+                    color: $White;
+                    background-color: transparent;
+
+                    font-size: 17px;
+
+                    img
+                    {
+                        margin-right: 10px;
+                        width: 18px;
+                    }
+
+                    &:active 
+                    {
+                        transform: translateY(1px); /* Add a slight downward shift when pressed */
+                    }
+
+                    &:hover
+                    {
+                        color: $OffWhite;
+                    }
+                }
+
+            }
+        }
+
+      
+
+        .homePage
+        {
+            flex-grow: 1;
+            margin-left:  $pageGap;
+            margin-right: $pageGap;
+            border-radius: $boxRoundness; 
+            @extend .custom-gradient;
+            padding: 20px;
+            max-height: 750px;
+        }
+    }
+}
