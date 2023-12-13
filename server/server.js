@@ -20,7 +20,6 @@ app.use(
   })
 );
 
-
 // Define routes
 app.use('/api/register', require('./routes/register'));
 app.use('/api/auth', require('./routes/auth'));
@@ -30,6 +29,7 @@ app.use('/api/logout', require('./routes/logout'));
 app.use('/api/userInfo', require('./routes/userInfo'));
 app.use('/api/playlistSongs', require('./routes/playlistSongs'));
 app.use('/api/addSong', require('./routes/addSong'));
+app.use('/api/addAlbum', require('./routes/addAlbum'));
 
 app.get('/', (req, res) => {
   return res.json('From Backend');
