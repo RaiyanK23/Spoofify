@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import AddPlaylistIcon from "../Images/AddPlaylistIcon.png";
 
+import "../css/Components/CreatePlaylistButton.scss"
+
 const CreatePlaylistButton = ({ onPlaylistCreate }) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [playlistName, setPlaylistName] = useState("");
@@ -51,6 +53,8 @@ const CreatePlaylistButton = ({ onPlaylistCreate }) => {
       e.preventDefault();
       // Handle confirmation
       handleConfirm();
+
+      closeModal();
     }
   };
 
@@ -63,11 +67,20 @@ const CreatePlaylistButton = ({ onPlaylistCreate }) => {
       {isModalOpen && (
         <div className="modal">
           <div className="modal-content">
-            <span className="close" onClick={closeModal}>
-              &times;
-            </span>
-            <p>Enter playlist name:</p>
+            
+            <div className="closeButtonArea">
+              <span className="close" onClick={closeModal}>
+                &times;
+              </span>
+            </div>
+
+            <div className="titleText">
+              <p>Enter playlist name</p>
+            </div>
+
+            
             <input
+              className="inputBox"
               type="text"
               value={playlistName}
               onChange={(e) => setPlaylistName(e.target.value)}

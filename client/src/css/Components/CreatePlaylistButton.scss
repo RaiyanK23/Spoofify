@@ -1,0 +1,74 @@
+@import "../ColorPallet";
+
+.modal
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 250px;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: linear-gradient(to bottom, #055f74, #034352);
+    z-index: 9999;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .closeButtonArea
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .titleText
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 30px;
+
+        margin-bottom: 30px;
+    }
+
+    .inputBox
+    {
+        width: 400px;
+        height: 20px;
+
+        border-radius: 40px;
+        border: 2px solid $White; 
+        background-color: $White;
+        margin-left: 30px;
+        padding: 10px;
+
+        
+        color: black;
+        font-size: 17px;
+        font-weight: 700;
+
+
+        input::value   
+        {
+            color: #ff0000;
+            font-size: 17px;
+            /* Add any additional styles for the entered text here */
+        }
+
+        &:active 
+        {
+            transform: translateY(1px); /* Add a slight downward shift when pressed */
+        }
+
+        &:hover
+        {
+            scale: (1.01);
+        }
+    }
+}
