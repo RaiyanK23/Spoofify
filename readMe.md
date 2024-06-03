@@ -41,3 +41,7 @@
 3. Explore and interact with the application based on your preferences.
 
 4. Enjoy using the application!
+
+Screen Shots
+![image](https://github.com/RaiyanK23/Spoofify/assets/59852123/b9537516-b83a-46f2-8997-c283253c09b3)
+
