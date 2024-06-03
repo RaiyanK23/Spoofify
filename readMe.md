@@ -42,6 +42,11 @@
 
 4. Enjoy using the application!
 
-Screen Shots
+## Screen Shots
 ![image](https://github.com/RaiyanK23/Spoofify/assets/59852123/b9537516-b83a-46f2-8997-c283253c09b3)
+
+![image](https://github.com/RaiyanK23/Spoofify/assets/59852123/7662ee43-eeb9-4493-844f-5ee7abe000c4)
+
+![image](https://github.com/RaiyanK23/Spoofify/assets/59852123/825be800-6445-4f4a-83b9-94dc11ac2d59)
+
 
